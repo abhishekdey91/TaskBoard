@@ -1,0 +1,116 @@
+<div class="container-fluid">
+  <div class="" style="margin-top: 10px;">
+    <ng-container *ngIf="cardView">
+      <span class="fa fa-camera header"></span>&nbsp;&nbsp;<span class="header">Task Manager &nbsp;&nbsp;</span>
+      <label for="filterlist" class="filter">Filter By:</label>
+      <input list="list" name="filterlist" id="filterlist" value="Due Date">
+      <datalist id="list">
+        <option value="Due Date">
+      </datalist>
+    </ng-container>
+    <ng-container *ngIf="recordView">
+      <span class="fa fa-table header"></span>&nbsp;&nbsp;<span class="header">Workstream &nbsp;&nbsp;</span>
+      <label for="filterlist" class="filter">Show Policies for Activity:</label>
+      <input list="list" name="filterlist" id="filterlist" value="Policy Issuance">
+      <datalist id="list">
+        <option value="Policy Issuance">
+      </datalist>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="filterlist2" class="filter">Showing:</label>
+      <input list="list1" name="filterlist2" id="filterlist2" value="8 Columns">
+      <datalist id="list1">
+        <option value="8 Columns">
+      </datalist>
+    </ng-container>
+    
+    <div class="row toggleView">
+      <div style="margin: -5px 0;">View: &nbsp;&nbsp;</div>
+      <div class="fa fa-camera" (click)="toggleView()" [ngClass]="{'active' : cardView}"></div> &nbsp;&nbsp;&nbsp;
+      <div class="fa fa-table" (click)="toggleView()" [ngClass]="{'active' : recordView}"></div>
+    </div>
+  </div>
+
+  <div class="row cardView" *ngIf="cardView">
+    <ng-container *ngFor="let grpDate of grpItemKeys; let first = first;">
+        <div class="col-lg-3">
+          <div class="col-lg-12 due-date"><span *ngIf="first">Due</span> {{grpDate | date:'mediumDate'}}</div>
+          <div class="item-list" cdkDropList id="{{grpDate}}" (cdkDropListDropped)="drop($event)" [cdkDropListData]="grpItem[grpDate]" [cdkDropListConnectedTo]="connect(grpDate)">
+            <div cdkDrag *ngFor="let grpDa of grpItem[grpDate];">
+              <div class="col-card">
+                <div class="col-lg-12 mb-16 col-text">{{grpDa.type}}<span style="float: right;">::</span></div>
+                <div class="col-lg-12"><span class="col-head">Category:</span>&nbsp;&nbsp;{{grpDa.category}}</div>
+                <div class="col-lg-12"><span class="col-head">Responsibility:</span>&nbsp;&nbsp;{{grpDa.responsibility}}</div>
+                <div class="col-lg-12"><span class="col-head">Client:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.client}}</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </ng-container>
+  </div>
+
+  <div class="row recordView" *ngIf="recordView" style="margin: 20px 20px;">
+    <div style="width:100%;">
+      <div class="col-lg-12 records-data">
+          <div class="row">
+          <td class="col-lg-2">Policy Number</td>
+          <td class="col-lg-2">Status</td>
+          <td class="col-lg-2">Group Name</td>
+          <td class="col-lg-2">Notes</td>
+          <td class="col-lg-1">Effective Date</td>
+          <td class="col-lg-1">TPA</td>
+          <td class="col-lg-1">Underwriter</td>
+          <td class="col-lg-1" >Producer</td>
+        </div>
+      </div>
+      <div *ngFor="let data of currentDataList; let i = index" class="records-data col-lg-12">
+        <div class="row">
+          <td class="col-lg-2 text-style" title="{{data.policyNumber}}">{{data.policyNumber}}</td>
+          <td class="col-lg-2" title="{{data.status}}">{{data.status}}</td>
+          <td class="col-lg-2" title="{{data.groupName}}">{{data.groupName}}</td>
+          <td class="col-lg-2 text-style" title="{{data.notes}}">{{data.notes}}</td>
+          <td class="col-lg-1" title="{{data.effectiveDate | date:'mediumDate'}}">{{data.effectiveDate | date:'mediumDate'}}</td>
+          <td class="col-lg-1" title="{{data.tpa}}">{{data.tpa}}</td>
+          <td class="col-lg-1" title="{{data.underwriter}}">{{data.underwriter}}</td>
+          <td class="col-lg-1" title="{{data.producer}}">{{data.producer}}</td>
+        </div>
+      </div>
+      <div class="pagination">
+        <p>Items per page: {{itemsPerPage}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span>{{item1}}-{{item2}} of {{totalItem}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span [ngClass]="{active: this.index >=1}" (click)="previousItem()"><</span> &nbsp;&nbsp; <span [ngClass]="{active: this.index + 1 < this.totalItem/this.itemsPerPage}" (click)="nextItem()">></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="drag-container">
+          <div class="section-heading">Still Doing</div>
+  
+          <div cdkDropList #pendingList="cdkDropList" [cdkDropListData]="todo"
+            [cdkDropListConnectedTo]="[doneList,reviewList]" class="item-list" (cdkDropListDropped)="drop($event)">
+            <div class="item-box1" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="drag-container">
+          <div class="section-heading">Done</div>
+  
+          <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done"
+            [cdkDropListConnectedTo]="[pendingList,reviewList]" class="item-list" (cdkDropListDropped)="drop($event)">
+            <div class="item-box1" *ngFor="let item of done" cdkDrag>{{item}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="drag-container">
+          <div class="section-heading">Nevermind</div>
+          <div cdkDropList #reviewList="cdkDropList" [cdkDropListData]="review"
+            [cdkDropListConnectedTo]="[doneList,pendingList, reviewList]" class="item-list" (cdkDropListDropped)="drop($event)">
+            <div class="item-box1" *ngFor="let item of review" cdkDrag>{{item}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

@@ -1,0 +1,268 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/*OE header CSS*/
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.banner {
+    background-size: cover !important;
+    /*background-position: 50% 50% !important;*/
+    height: 450px;
+    width: 100%;
+    margin-top: 80px;
+    background-repeat: no-repeat !important;
+}
+
+.themeSection {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.banner > p {
+    color: white;
+    padding: 10px;
+}
+
+.btnTransparent {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 40px;
+    font-weight: 500;
+    margin-right: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+    .btnTransparent:active,
+    .btnTransparent:hover,
+    .external-link:active,
+    .external-link:hover {
+        outline: none;
+    }
+
+.external-link {
+    border: none;
+    color: #fff;
+    padding: 10px 40px;
+    font-weight: 500;
+    margin-right: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.enroll-now {
+    font-weight: 600;
+    padding-right: 15px;
+}
+
+.oe-overlay {
+    padding: 10px 50px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.oe-header {
+    margin-bottom: 20px;
+}
+
+    .oe-header .navbar {
+        height: 80px;
+        background: #fff;
+    }
+
+        .oe-header .navbar #collapsingNavbar {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .oe-header .navbar ul.nav.navbar-nav {
+            flex-wrap: nowrap;
+        }
+
+    .oe-header .nav-link {
+        color: rgba(0,0,0,0.9);
+        font-weight: 500;
+    }
+
+        .oe-header .nav-link:hover,
+        .oe-header .nav-link:focus {
+            font-weight: 600;
+        }
+
+.oe-company-logo {
+    /*max-width: 200px;
+  max-height: 60px;*/
+    max-width: 300px;
+    max-height: 68px;
+    margin-right: .5rem;
+}
+
+.header-description {
+    display: table;
+    min-height: 100px;
+    padding: 10px 50px;
+}
+
+    .header-description .h1 {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .header-description .header-richtext {
+        max-height: 200px;
+        overflow-y: auto;
+        margin-bottom: 1rem;
+    }
+
+@media screen and (max-width: 576px) {
+    .banner {
+        height: auto;
+        min-height: 250px;
+        background-position: 20% !important;
+        background-size: cover !important;
+    }
+
+    .padding-top40prct {
+        padding-top: 40% !important;
+    }
+
+    .banner .themeSection {
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+        white-space: nowrap;
+        display: block !important;
+        width: 40% !important;
+    }
+
+    .oe-company-logo {
+        max-width: 100px;
+    }
+
+    .btnTransparent {
+        width: 90%;
+    }
+}
+
+.collapse.show {
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 5px 5px 15px;
+    border: 1px solid rgba(0,0,0,.3);
+}
+
+.header-description ::ng-deep p {
+    margin-bottom: 0px;
+}
+
+::-webkit-scrollbar {
+    height: 3px;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: #ddd;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 358px) {
+    .banner {
+        background-position: 10% !important;
+    }
+}
+/*OE header CSS ends here*/

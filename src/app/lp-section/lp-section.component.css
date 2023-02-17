@@ -1,0 +1,90 @@
+.due-date {
+  border: 1px solid gray;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: #edebeb;
+  color: brown;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.col-card {
+  border: 1px solid black;
+  margin: 19px 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px dimgrey;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.col-text {
+    color: #1a6997;
+    font-size: 15px;
+}
+
+.col-head {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.records-data td {
+  max-width: 300px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  white-space: nowrap;
+}
+
+.active {
+  color: #2cbff4;
+}
+
+.toggleView {
+  float: right;
+  margin: 6px 0px 0 0px;
+  cursor: pointer;
+}
+
+.text-style {
+  color: #1a6997;
+}
+
+.cardView {
+  clear: both;
+}
+
+.recordView {
+  clear: both;
+}
+
+.pagination {
+  float: right;
+  margin: 10px 0px;
+}
+
+.item-list {
+  min-height: 150px;
+  min-width: 300px;
+}
+
+.header {
+  color: #1a6997;
+  font-size: 20px;
+}
+
+.filter {
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+input {
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}

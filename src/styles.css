@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.bg-editor-theme {
+  background-color: #2cbff4 !important;
+}
+.text-editor-theme {
+  color: #2cbff4 !important;
+}
+.border-editor-theme {
+  border-color: #2cbff4 !important;
+}
+.pointer{
+    cursor:pointer !important;
+}
+.theme-bg-clr {
+  background-color: #1785BA !important;
+}
+.btn-editor-theme {
+  background-color: #2cbff4 !important;
+  color: white !important;
+}
+  .btn-editor-theme:hover {
+    background-color: #1785ba !important;
+  }
+.lp-design-tool .nav {
+  flex-wrap: nowrap !important;
+  justify-content:space-between;
+}
+.lp-design-tool .nav-link.active {
+  border-bottom: 2px solid #2cbff4 !important;
+}
+.lp-design-tool .nav-link {
+  font-size: 12px;
+  border-radius:0;
+}
+.lp-design-tool .nav-item{
+    width:100%;
+    text-align:center;
+}
+.fit-height {
+  max-height: 80vh;
+  overflow-y: auto;
+}

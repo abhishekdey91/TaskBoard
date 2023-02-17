@@ -1,0 +1,527 @@
+{
+  "globalSettings": {
+    "themeSettings": {
+      "colorTheme": "rgb(23, 133, 186)",
+      "fontFamily": "\"myriad-pro\", Helvetica, Arial, sans-serif"
+    },
+    "menuType": "",
+    "menuRenderPosition": "top",
+    "animationType": "noanimation",
+    "pageRenderType": "single",
+    "themeId": 1,
+    "socialMediaTitle": "WebinarTemplate1",
+    "allowClientsToEdit": false,
+    "planList": ""
+  },
+  "sectionJson": [
+    {
+      "sectionId": "header",
+      "sectionName": "Header",
+      "sectionTitle": "Welcome to Lake Forest Pediatric Associates' 2021 Open Enrollment",
+      "sectionDescription": "&lt;p&gt;Annual Enrollment is from December XX to December XX&lt;/p&gt;",
+      "sectionOrder": 1,
+      "sectionType": 1,
+      "showInMenu": true,
+      "backgroundImage": "bannerImg-5.jpg",
+      "layoutId": "1",
+      "nameOfClient": "Lake Forest Pediatric Associates",
+      "showLogo": true,
+      "resources": [],
+      "specialResources": [],
+      "isDefault": true,
+      "isSelected": true,
+      "backgroundImageUrl": "https://connect2storageaccount.blob.core.windows.net/publicimagecontainer/47ac1c64-8334-4fcf-ab13-216f23666aa9.jpg",
+      "parentId": null,
+      "subSections": [],
+      "noBackgroundImageSelected": true,
+      "actionLinkAlignment": "start"
+    },
+    {
+      "sectionId": "page1",
+      "sectionName": "Page",
+      "sectionTitle": "",
+      "sectionDescription": "",
+      "sectionOrder": 1,
+      "sectionType": 3,
+      "showInMenu": true,
+      "backgroundImage": "",
+      "layoutId": "1",
+      "nameOfClient": "",
+      "showLogo": true,
+      "resources": [
+        {
+          "id": "97c54416-41bd-23e4-6574-087fae0357cf",
+          "resourceId": "",
+          "resourceName": "pbi test ",
+          "description": "",
+          "resourceTypeId": "12",
+          "link": "",
+          "htmlData": "",
+          "resourceViewType": "",
+          "resourceInlineStyle": "",
+          "tileImageUrl": "",
+          "priority": 0,
+          "colorPattern": "",
+          "docVaultUniqueId": "",
+          "documentName": "",
+          "canExport": true,
+          "resourceStyle": "Default",
+          "renderInteractiveReport": false,
+          "hideResourceOverlay": true,
+          "hideReportPopup": false,
+          "showPagesinTiles": false,
+          "htmlDataImageUrl": "",
+          "backgroundColor": "",
+          "altText": "",
+          "hideHtmlCardBorder": false,
+          "htmlCardNoBg": false,
+          "resourceCardStyle": "default",
+          "chevronHeaderName": "",
+          "chevronColor": "",
+          "cardBackgroundType": "custom",
+          "chevronBackgroundType": "custom",
+          "videoSource": "",
+          "hideResourceName": false,
+          "locId": "",
+          "selectedPlanList": [],
+          "selectedKeywordList": [],
+          "imgResource": [
+            "https://cpadsstorageaccountqa.blob.core.windows.net/publicimagecontainer/0b8d4aa3-7d19-4c83-89df-066ac29ff3bb.png",
+            "https://forrit-one-msedu-p1-consumables.azureedge.net/media/96b7ceaa-3066-4c65-8bb7-027ba068158a/Resource-Center-Hero-1083x406.jpg",
+            "https://cpadsstorageaccountqa.blob.core.windows.net/publicimagecontainer/0b8d4aa3-7d19-4c83-89df-066ac29ff3bb.png",
+            "https://media.istockphoto.com/id/511119796/photo/moti-masjid-pearl-mosque-bhopal-india.jpg?s=612x612&w=0&k=20&c=bnyyhnxOFJLnKVrpVNOjMbeyLuBm6glCOovc-2M_C-o="
+          ],
+          "planTemplate": "",
+          "resourceDisplayType": 1,
+          "chevronHeaderNameColor": "",
+          "chevronHeaderNameBgColor": "",
+          "chevronHeaderNameBold": false,
+          "chevronHeaderNameItalic": false,
+          "chevronHeaderNameUnderline": false,
+          "chevronHeaderNameStrike": false,
+          "adjustChevronHeaderNameFont": false,
+          "chevronHeaderNameFontSize": "",
+          "tileData": {
+            "clientId": 0,
+            "tileId": 251,
+            "tileName": "About the Dataset",
+            "tileDescription": "Corporate Benefits Benchmarking About the Dataset",
+            "tileDefinition": "{\"Name\":\"About the Dataset\",\"ShowTitle\":\"true\",\"ColumnSize\":\"2\",\"TileTypeCode\":\"PBI\",\"DisplayOrder\":\"2\",\"WorkSpaceId\":\"2088e639-3b26-4d27-90bf-5bf2b09464a7\",\"ReportId\":\"aeab5da6-1b28-49a3-a3ac-e0c88026322b\",\"ReportSection\":\"ReportSectionab47c3a0e12a5ea4dd30\",\"DetailReportWorkSpaceId\":\"76bb6843-4411-42c9-8f57-0efd749ca71d\",\"DetailReportReportId\":\"90a6d0a5-e8f4-4b11-a4b8-87ec5566a349\",\"DetailReportSection\":\"ReportSectionab47c3a0e12a5ea4dd30\",\"FilterMetadata\":[{\"displayText\":\"Plan Type\",\"filterKey\":\"Lines of Coverage/PlanType.Name\",\"filterOptions\":[{\"option\":\"All\"},{\"option\":\"Flat Amount\"},{\"option\":\"Multiple of Salary\"},{\"option\":\"EPO\"},{\"option\":\"HDHP\"},{\"option\":\"HMO\"},{\"option\":\"PPO\"},{\"option\":\"POS\"},{\"option\":\"Indemnity\"},{\"option\":\"DMO\"},{\"option\":\"DPPO\"}],\"isMultiFilterSelectionOptionAllowed\":\"true\",\"defaultFilterOptions\":\"\",\"selectedOption\":\"\"},{\"displayText\":\"Industry\",\"filterKey\":\"Benchmark Industries/BenchmarkIndustry\",\"filterOptions\":[{\"option\":\"Accommodation and Food Services\"},{\"option\":\"Administrative, Support, Waste Mgmt, Remediation Services\"},{\"option\":\"Agriculture, Forestry, Fishing and Hunting\"},{\"option\":\"Arts, Entertainment, and Recreation\"},{\"option\":\"Construction\"},{\"option\":\"Educational Services\"},{\"option\":\"Finance and Insurance\"},{\"option\":\"Health Care and Social Assistance\"},{\"option\":\"Manufacturing\"},{\"option\":\"Wholesale Trade\"},{\"option\":\"Retail Trade\"},{\"option\":\"Transportation and Warehousing\"},{\"option\":\"Other Services (except Public Administration)\"},{\"option\":\"Professional, Scientific, and Technical Services\"},{\"option\":\"Mining, Quarrying, and Oil and Gas Extraction\"},{\"option\":\"Utilities\"},{\"option\":\"Real Estate and Rental and Leasing\"},{\"option\":\"Management of Companies and Enterprises\"},{\"option\":\"Unreported\"},{\"option\":\"Information\"},{\"option\":\"Public Administration\"}],\"isMultiFilterSelectionOptionAllowed\":\"true\",\"defaultFilterOptions\":\"\",\"selectedOption\":\"\"},{\"displayText\":\"Region\",\"filterKey\":\"Benchmark Regions/BenchmarkRegion\",\"filterOptions\":[{\"option\":\"Non-US Region\"},{\"option\":\"Midwest\"},{\"option\":\"Northeast\"},{\"option\":\"Outlying Area\"},{\"option\":\"South\"},{\"option\":\"West\"}],\"isMultiFilterSelectionOptionAllowed\":\"true\",\"defaultFilterOptions\":\"\",\"selectedOption\":\"\"},{\"displayText\":\"Size\",\"filterKey\":\"Benchmark Sizes/SizeBand\",\"filterOptions\":[{\"option\":\"0\"},{\"option\":\"1 - 49\"},{\"option\":\"50 - 99\"},{\"option\":\"100 - 249\"},{\"option\":\"250 - 499\"},{\"option\":\"500 - 749\"},{\"option\":\"750 - 999\"},{\"option\":\"1000 - 2499\"},{\"option\":\"2500 - 4999\"},{\"option\":\"5000+\"}],\"isMultiFilterSelectionOptionAllowed\":\"true\",\"defaultFilterOptions\":\"\",\"selectedOption\":\"\"}]}",
+            "tileTypeId": 2,
+            "tileTypeCode": "PBI",
+            "tileTypeDescription": "Power BI Report",
+            "tileDisplayOrder": 1,
+            "source": null,
+            "suggestedLOB": "Employee Benefits",
+            "tileDefinitionObj": {
+              "Name": "About the Dataset",
+              "ShowTitle": "true",
+              "ColumnSize": "2",
+              "TileTypeCode": "PBI",
+              "DisplayOrder": "2",
+              "WorkSpaceId": "2088e639-3b26-4d27-90bf-5bf2b09464a7",
+              "ReportId": "aeab5da6-1b28-49a3-a3ac-e0c88026322b",
+              "ReportSection": "ReportSectionab47c3a0e12a5ea4dd30",
+              "DetailReportWorkSpaceId": "76bb6843-4411-42c9-8f57-0efd749ca71d",
+              "DetailReportReportId": "90a6d0a5-e8f4-4b11-a4b8-87ec5566a349",
+              "DetailReportSection": "ReportSectionab47c3a0e12a5ea4dd30",
+              "FilterMetadata": [
+                {
+                  "displayText": "Plan Type",
+                  "filterKey": "Lines of Coverage/PlanType.Name",
+                  "filterOptions": [
+                    {
+                      "option": "All"
+                    },
+                    {
+                      "option": "Flat Amount"
+                    },
+                    {
+                      "option": "Multiple of Salary"
+                    },
+                    {
+                      "option": "EPO"
+                    },
+                    {
+                      "option": "HDHP"
+                    },
+                    {
+                      "option": "HMO"
+                    },
+                    {
+                      "option": "PPO"
+                    },
+                    {
+                      "option": "POS"
+                    },
+                    {
+                      "option": "Indemnity"
+                    },
+                    {
+                      "option": "DMO"
+                    },
+                    {
+                      "option": "DPPO"
+                    }
+                  ],
+                  "isMultiFilterSelectionOptionAllowed": "true",
+                  "defaultFilterOptions": "",
+                  "selectedOption": ""
+                },
+                {
+                  "displayText": "Industry",
+                  "filterKey": "Benchmark Industries/BenchmarkIndustry",
+                  "filterOptions": [
+                    {
+                      "option": "Accommodation and Food Services"
+                    },
+                    {
+                      "option": "Administrative, Support, Waste Mgmt, Remediation Services"
+                    },
+                    {
+                      "option": "Agriculture, Forestry, Fishing and Hunting"
+                    },
+                    {
+                      "option": "Arts, Entertainment, and Recreation"
+                    },
+                    {
+                      "option": "Construction"
+                    },
+                    {
+                      "option": "Educational Services"
+                    },
+                    {
+                      "option": "Finance and Insurance"
+                    },
+                    {
+                      "option": "Health Care and Social Assistance"
+                    },
+                    {
+                      "option": "Manufacturing"
+                    },
+                    {
+                      "option": "Wholesale Trade"
+                    },
+                    {
+                      "option": "Retail Trade"
+                    },
+                    {
+                      "option": "Transportation and Warehousing"
+                    },
+                    {
+                      "option": "Other Services (except Public Administration)"
+                    },
+                    {
+                      "option": "Professional, Scientific, and Technical Services"
+                    },
+                    {
+                      "option": "Mining, Quarrying, and Oil and Gas Extraction"
+                    },
+                    {
+                      "option": "Utilities"
+                    },
+                    {
+                      "option": "Real Estate and Rental and Leasing"
+                    },
+                    {
+                      "option": "Management of Companies and Enterprises"
+                    },
+                    {
+                      "option": "Unreported"
+                    },
+                    {
+                      "option": "Information"
+                    },
+                    {
+                      "option": "Public Administration"
+                    }
+                  ],
+                  "isMultiFilterSelectionOptionAllowed": "true",
+                  "defaultFilterOptions": "",
+                  "selectedOption": ""
+                },
+                {
+                  "displayText": "Region",
+                  "filterKey": "Benchmark Regions/BenchmarkRegion",
+                  "filterOptions": [
+                    {
+                      "option": "Non-US Region"
+                    },
+                    {
+                      "option": "Midwest"
+                    },
+                    {
+                      "option": "Northeast"
+                    },
+                    {
+                      "option": "Outlying Area"
+                    },
+                    {
+                      "option": "South"
+                    },
+                    {
+                      "option": "West"
+                    }
+                  ],
+                  "isMultiFilterSelectionOptionAllowed": "true",
+                  "defaultFilterOptions": "",
+                  "selectedOption": ""
+                },
+                {
+                  "displayText": "Size",
+                  "filterKey": "Benchmark Sizes/SizeBand",
+                  "filterOptions": [
+                    {
+                      "option": "0"
+                    },
+                    {
+                      "option": "1 - 49"
+                    },
+                    {
+                      "option": "50 - 99"
+                    },
+                    {
+                      "option": "100 - 249"
+                    },
+                    {
+                      "option": "250 - 499"
+                    },
+                    {
+                      "option": "500 - 749"
+                    },
+                    {
+                      "option": "750 - 999"
+                    },
+                    {
+                      "option": "1000 - 2499"
+                    },
+                    {
+                      "option": "2500 - 4999"
+                    },
+                    {
+                      "option": "5000+"
+                    }
+                  ],
+                  "isMultiFilterSelectionOptionAllowed": "true",
+                  "defaultFilterOptions": "",
+                  "selectedOption": ""
+                }
+              ]
+            },
+            "reportPreviewImageUrl": "https://cpadsstorageaccountqa.blob.core.windows.net/publicimagecontainer/ed3c4bcd-612f-4fb5-b25e-82e360d0f842.png"
+          }
+        }
+      ],
+      "specialResources": [],
+      "isDefault": true,
+      "isSelected": true,
+      "backgroundImageUrl": "",
+      "noBackgroundImageSelected": true,
+      "noSectionIconSelected": true,
+      "subSections": [
+        {
+          "sectionId": "introduction",
+          "sectionName": "Introduction",
+          "sectionTitle": "",
+          "sectionDescription": "&lt;p&gt;Annual enrollment is your opportunity to learn about the 2021 Health Care Program, review your current coverage and choose the best options for you and your family. Please review our 2021 Enrollment Guide and attend our upcoming education session to learn more about our 2021 benefits offerings&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Education Session :&amp;nbsp;(if conducting live sessions vs using a video)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Join us for the education&amp;nbsp;session below to learn more about our 2021 benefits programs&lt;/p&gt;&lt;p&gt;Date:&lt;/p&gt;&lt;p&gt;Time:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;",
+          "sectionOrder": 2,
+          "sectionType": 3,
+          "showInMenu": false,
+          "backgroundImage": "",
+          "layoutId": "2",
+          "resources": [],
+          "specialResources": [
+            {
+              "type": "actionlink",
+              "data": {
+                "name": "webinar",
+                "linkType": "WebinarRegistration",
+                "link": "https://www.nfp.com",
+                "order": 1,
+                "displayType": "",
+                "displayTypeImageUrl": "",
+                "landingPageList": {
+                  "landingPageId": 0,
+                  "organizersTimeZone": "Asia/Kolkata"
+                },
+                "registerNowText": "srdtgerterrrewewr",
+                "renderType": "",
+                "subject": "",
+                "baseUrl": "",
+                "dynamicLinkValue": {},
+                "videoResource": "",
+                "priority": 0
+              },
+              "id": "cf8f3a97-9160-d0f3-9e35-7b44d1862713"
+            }
+          ],
+          "isDefault": true,
+          "isSelected": true,
+          "parentId": "page1",
+          "noBackgroundImageSelected": true,
+          "noSectionIconSelected": true,
+          "actionLinkAlignment": "start"
+        },
+        {
+          "sectionId": "benefitsoverview",
+          "sectionName": "Benefits Overview",
+          "sectionTitle": "",
+          "sectionDescription": "&lt;ul&gt;&lt;li&gt;Read about what is new for 2021 (insert what's new document via Add resource)&lt;/li&gt;&lt;li&gt;Review all your benefits plans, options, and rates for 2021 (insert the full benefits guide via Add resource)&lt;/li&gt;&lt;li&gt;Watch this short video to learn more about your 2021 benefit options&amp;nbsp;&amp;nbsp;(Add video via Add resource) &lt;/li&gt;&lt;/ul&gt;",
+          "sectionOrder": 3,
+          "sectionType": 3,
+          "showInMenu": true,
+          "backgroundImage": "",
+          "layoutId": "3",
+          "resources": [],
+          "specialResources": [],
+          "isDefault": true,
+          "isSelected": true,
+          "parentId": "page1",
+          "noBackgroundImageSelected": true,
+          "noSectionIconSelected": true,
+          "actionLinkAlignment": "start"
+        },
+        {
+          "sectionId": "howToEnroll",
+          "sectionName": "How To Enroll",
+          "sectionTitle": "Action Required",
+          "sectionDescription": "&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Visit (URL) to review your current coverage and enroll and modify your elections for 2021.&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;If you'd like to change your existing coverage or make new elections, you must do so by November XX. Your current medical, dental and vision elections will carry forward to 2021 if you don't make a new election. &lt;/li&gt;&lt;li&gt;To participate in a Health Savings Account or Flexible Spending Account in 2021, you &lt;strong&gt;must&lt;/strong&gt; make an active election, even if you're already participating in 2021.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;",
+          "sectionOrder": 4,
+          "sectionType": 3,
+          "showInMenu": true,
+          "bannerImage": "",
+          "layoutId": "1",
+          "resources": [],
+          "specialResources": [],
+          "isDefault": true,
+          "isSelected": true,
+          "parentId": "page1",
+          "noBackgroundImageSelected": true,
+          "noSectionIconSelected": true,
+          "actionLinkAlignment": "start"
+        },
+        {
+          "sectionId": "quickLinks",
+          "sectionName": "Additional Resources",
+          "sectionTitle": "Quick Links",
+          "sectionDescription": null,
+          "sectionOrder": 6,
+          "sectionType": 3,
+          "showInMenu": true,
+          "bannerImage": "",
+          "layoutId": "3",
+          "resources": [
+            {
+              "id": "8ef9d0b7-3919-c84b-e8aa-346dd2d926bb",
+              "resourceId": 603841,
+              "resourceName": "tblrs",
+              "description": "",
+              "resourceTypeId": "1",
+              "link": "",
+              "htmlData": "",
+              "resourceViewType": "",
+              "resourceInlineStyle": "",
+              "tileImageUrl": "https://cpadsstorageaccountqa.blob.core.windows.net/publicimagecontainer/fce3387b-f7df-4044-b09f-006c15d91254.jpg",
+              "priority": 0,
+              "colorPattern": "",
+              "docVaultUniqueId": "b8197ac4-ccc1-4849-8cf9-492e495ebb75",
+              "documentName": "Sample Client 8.pdf",
+              "canExport": false,
+              "resourceStyle": "Default",
+              "renderInteractiveReport": false,
+              "hideResourceOverlay": false,
+              "hideReportPopup": false,
+              "showPagesinTiles": false,
+              "htmlDataImageUrl": "",
+              "backgroundColor": "",
+              "altText": "",
+              "hideHtmlCardBorder": false,
+              "htmlCardNoBg": false,
+              "resourceCardStyle": "default",
+              "chevronHeaderName": "",
+              "chevronColor": "",
+              "cardBackgroundType": "custom",
+              "chevronBackgroundType": "custom",
+              "videoSource": "",
+              "hideResourceName": false,
+              "locId": "",
+              "selectedPlanList": [],
+              "selectedKeywordList": [],
+              "planTemplate": "",
+              "resourceDisplayType": "2",
+              "chevronHeaderNameColor": "",
+              "chevronHeaderNameBgColor": "",
+              "chevronHeaderNameBold": false,
+              "chevronHeaderNameItalic": false,
+              "chevronHeaderNameUnderline": false,
+              "chevronHeaderNameStrike": false,
+              "adjustChevronHeaderNameFont": false,
+              "chevronHeaderNameFontSize": "",
+              "isActive": true
+            }
+          ],
+          "specialResources": [],
+          "isDefault": true,
+          "isSelected": true,
+          "parentId": "page1",
+          "noBackgroundImageSelected": true,
+          "noSectionIconSelected": true,
+          "actionLinkAlignment": "start"
+        },
+        {
+          "sectionId": "contacts",
+          "sectionName": "Contact Us",
+          "sectionTitle": "",
+          "sectionDescription": "&lt;p&gt;&lt;span style=\"color: black;\"&gt;Call the Employee Benefits Center weekdays at XXX-XXX-XXXX&lt;/span&gt;&lt;/p&gt;",
+          "sectionOrder": 5,
+          "sectionType": 4,
+          "showInMenu": true,
+          "bannerImage": "",
+          "layoutId": "4",
+          "resources": [],
+          "specialResources": [
+            {
+              "type": "contacts",
+              "data": {
+                "clientContacts": [],
+                "accountTeams": [],
+                "additionalContacts": []
+              },
+              "id": "b744a62a-7518-ea15-fe22-f874a8e9b392"
+            }
+          ],
+          "isDefault": true,
+          "isSelected": true,
+          "parentId": "page1",
+          "noBackgroundImageSelected": true,
+          "noSectionIconSelected": true,
+          "actionLinkAlignment": "start"
+        }
+      ],
+      "actionLinkAlignment": "start"
+    },
+    {
+      "sectionId": "footer",
+      "sectionName": "Footer",
+      "sectionTitle": "Footer",
+      "sectionDescription": "Insurance services provided through NFP Insurance Services, Inc. (NFPISI), a subsidiary of NFP Corp (NFP). NFP and its subsidiaries do not provide tax or legal advice. This material was created to provide a summary of the subjects covered, but should not be regarded as a complete analysis of these subjects. The services of an appropriate professional should be sought regarding your individual situation.",
+      "sectionOrder": 6,
+      "sectionType": 2,
+      "showInMenu": false,
+      "backgroundImage": "Pattern-Option-01.jpg",
+      "colorPattern": "",
+      "layoutId": "1",
+      "resources": [],
+      "specialResources": [],
+      "isDefault": true,
+      "isSelected": true,
+      "sectionCopyRight": "Copyright © 2021 NFP Corp. All Rights Reserved.",
+      "backgroundImageUrl": "https://connect2storageaccount.blob.core.windows.net/publicimagecontainer/2ad7ec03-9752-45b9-820a-36d3a2902493.jpg",
+      "parentId": null,
+      "subSections": [],
+      "noBackgroundImageSelected": true,
+      "logoLinkUrl": "https://localhost:44388/vlp/Demo's"
+    }
+  ],
+  "hasPublished": true
+}
