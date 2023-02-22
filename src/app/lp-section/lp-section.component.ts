@@ -11,7 +11,6 @@ import * as _ from 'lodash';
 
 export class LpSectionComponent implements OnInit {
   constructor() { }
-  eventsSubject: Subject<void> = new Subject<void>();
   items: any
   grpItemKeys;
   grpItem = {};
@@ -28,7 +27,7 @@ export class LpSectionComponent implements OnInit {
   key = 'date';
   keyTableR = 8;
   dataListKeys = ['Policy Number','Status','Group Name','Notes','Effective Date','TPA','Underwriter','Producer'];
-  keyTable = this.dataListKeys[0];
+  keyTable = 0;
 
   ngOnInit() {
     this.data = [{ date: new Date('03-1-1986'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollmentio', responsibility: 'Internal Account Team', client: 'Apple Inc 9000' },
@@ -115,6 +114,10 @@ export class LpSectionComponent implements OnInit {
   }
 
   displayTableDetails(key, isRequired) {
-    return isRequired || key !== this.keyTable;
+    return isRequired || key != this.keyTable;
+  }
+  
+  displayTableu(index) {
+    return Object.keys(this.dataList[0])[this.keyTable];
   }
 }

@@ -14,7 +14,7 @@
     <ng-container *ngIf="recordView">
       <span class="fa fa-table header"></span>&nbsp;&nbsp;<span class="header">Workstream &nbsp;&nbsp;</span>
       <label for="filterlist" class="filter">Show Policies for Activity:</label>
-      <input list="list" name="filterlist" id="filterlist" value="Policy Issuance" (change)="checkTable($event)">
+      <!-- <input list="list" name="filterlist" id="filterlist" value="Policy Issuance" (change)="checkTable($event)">
       <datalist id="list">
         <option value="Policy Issuance">
         <option value="Status">
@@ -24,7 +24,17 @@
         <option value="TPA">
         <option value="Underwriter">
         <option value="Producer">
-      </datalist>
+      </datalist> -->
+      <select id="list" (change)="checkTable($event)">
+        <option value="0">Policy Issuance</option>
+        <option value="1">Status</option>
+        <option value="2">Group Name</option>
+        <option value="3">Notes</option>
+        <option value="4">Effective Date</option>
+        <option value="5">TPA</option>
+        <option value="6">Underwriter</option>
+        <option value="7">Producer</option>
+      </select>
 
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="filterlist2" class="filter">Showing:</label>
       <select id="filterlist" (change)="checkTotalRow($event)">
@@ -68,28 +78,28 @@
     <div style="width:100%;">
       <div class="col-lg-12 records-data">
           <div class="row">
-          <td *ngIf="displayTableRecords(0) && displayTableDetails(keyTable, true)" class="col-lg-2">{{keyTable}}</td>
-          <td *ngIf="displayTableRecords(0) && displayTableDetails('Policy Number')" class="col-lg-2">Policy Number</td>
-          <td *ngIf="displayTableRecords(1) && displayTableDetails('Status')" class="col-lg-2">Status</td>
-          <td *ngIf="displayTableRecords(2) && displayTableDetails('Group Name')" class="col-lg-2">Group Name</td>
-          <td *ngIf="displayTableRecords(3) && displayTableDetails('Notes')" class="col-lg-2">Notes</td>
-          <td *ngIf="displayTableRecords(4) && displayTableDetails('Effective Date')" class="col-lg-1">Effective Date</td>
-          <td *ngIf="displayTableRecords(5) && displayTableDetails('TPA')" class="col-lg-1">TPA</td>
-          <td *ngIf="displayTableRecords(6) && displayTableDetails('Underwriter')" class="col-lg-1">Underwriter</td>
-          <td *ngIf="displayTableRecords(7) && displayTableDetails('Producer')" class="col-lg-1">Producer</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0, true)" class="col-lg-1">{{this.dataListKeys[keyTable]}}</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0)" class="col-lg-2">Policy Number</td>
+          <td *ngIf="displayTableRecords(1) && displayTableDetails(1)" class="col-lg-2">Status</td>
+          <td *ngIf="displayTableRecords(2) && displayTableDetails(2)" class="col-lg-2">Group Name</td>
+          <td *ngIf="displayTableRecords(3) && displayTableDetails(3)" class="col-lg-2">Notes</td>
+          <td *ngIf="displayTableRecords(4) && displayTableDetails(4)" class="col-lg-1">Effective Date</td>
+          <td *ngIf="displayTableRecords(5) && displayTableDetails(5)" class="col-lg-1">TPA</td>
+          <td *ngIf="displayTableRecords(6) && displayTableDetails(6)" class="col-lg-1">Underwriter</td>
+          <td *ngIf="displayTableRecords(7) && displayTableDetails(7)" class="col-lg-1">Producer</td>
         </div>
       </div>
       <div *ngFor="let data of currentDataList; let i = index" class="records-data col-lg-12">
         <div class="row">
-          <td *ngIf="displayTableRecords(0) && displayTableDetails(keyTable, true)" class="col-lg-2 text-style" title="{{data[keyTable]}}">{{data[keyTable]}}</td>
-          <td *ngIf="displayTableRecords(0) && displayTableDetails('Policy Number')" class="col-lg-2 text-style" title="{{data.policyNumber}}">{{data.policyNumber}}</td>
-          <td *ngIf="displayTableRecords(1) && displayTableDetails('Status')" class="col-lg-2" title="{{data.status}}">{{data.status}}</td>
-          <td *ngIf="displayTableRecords(2) && displayTableDetails('Group Name')" class="col-lg-2" title="{{data.groupName}}">{{data.groupName}}</td>
-          <td *ngIf="displayTableRecords(3) && displayTableDetails('Notes')" class="col-lg-2 text-style" title="{{data.notes}}">{{data.notes}}</td>
-          <td *ngIf="displayTableRecords(4)  && displayTableDetails('Effective Date')" class="col-lg-1" title="{{data.effectiveDate | date:'mediumDate'}}">{{data.effectiveDate | date:'mediumDate'}}</td>
-          <td *ngIf="displayTableRecords(5) && displayTableDetails('TPA')" class="col-lg-1" title="{{data.tpa}}">{{data.tpa}}</td>
-          <td *ngIf="displayTableRecords(6)  && displayTableDetails('Underwriter')" class="col-lg-1" title="{{data.underwriter}}">{{data.underwriter}}</td>
-          <td *ngIf="displayTableRecords(7) && displayTableDetails('Producer')" class="col-lg-1" title="{{data.producer}}">{{data.producer}}</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0, true)" class="col-lg-1 text-style" title="{{data[displayTableu()]}}">{{data[displayTableu()]}}</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0)" class="col-lg-2 text-style" title="{{data.policyNumber}}">{{data.policyNumber}}</td>
+          <td *ngIf="displayTableRecords(1) && displayTableDetails(1)" class="col-lg-2" title="{{data.status}}">{{data.status}}</td>
+          <td *ngIf="displayTableRecords(2) && displayTableDetails(2)" class="col-lg-2" title="{{data.groupName}}">{{data.groupName}}</td>
+          <td *ngIf="displayTableRecords(3) && displayTableDetails(3)" class="col-lg-2 text-style" title="{{data.notes}}">{{data.notes}}</td>
+          <td *ngIf="displayTableRecords(4)  && displayTableDetails(4)" class="col-lg-1" title="{{data.effectiveDate | date:'mediumDate'}}">{{data.effectiveDate | date:'mediumDate'}}</td>
+          <td *ngIf="displayTableRecords(5) && displayTableDetails(5)" class="col-lg-1" title="{{data.tpa}}">{{data.tpa}}</td>
+          <td *ngIf="displayTableRecords(6)  && displayTableDetails(6)" class="col-lg-1" title="{{data.underwriter}}">{{data.underwriter}}</td>
+          <td *ngIf="displayTableRecords(7) && displayTableDetails(7)" class="col-lg-1" title="{{data.producer}}">{{data.producer}}</td>
         </div>
       </div>
       <div class="pagination">
