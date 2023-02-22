@@ -102,11 +102,11 @@ export class LpSectionComponent implements OnInit {
   }
 
   checkTable(event: any) {
-    this.keyTable = event && event.target.value || this.keyTable;
+    this.keyTable = parseInt(event && event.target.value || this.keyTable, 10);
   }
 
   checkTotalRow(event: any) {
-    this.keyTableR = event && event.target.value || this.keyTableR;
+    this.keyTableR = parseInt(event && event.target.value || this.keyTableR, 10);
   }
 
   displayTableRecords(index) {
@@ -117,7 +117,7 @@ export class LpSectionComponent implements OnInit {
     return isRequired || key != this.keyTable;
   }
   
-  displayTableu(index) {
+  displayTableu() {
     return Object.keys(this.dataList[0])[this.keyTable];
   }
 }

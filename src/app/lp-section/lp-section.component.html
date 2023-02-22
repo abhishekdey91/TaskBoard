@@ -77,7 +77,7 @@
     <div style="width:100%;">
       <div class="col-lg-12 records-data">
           <div class="row">
-          <td *ngIf="displayTableRecords(0) && displayTableDetails(0, true)" class="col-lg-1">{{this.dataListKeys[keyTable]}}</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0, true)" [ngClass]="[4,5,6,7].indexOf(keyTable) >= 0 ? 'col-lg-1' : 'col-lg-2'">{{this.dataListKeys[keyTable]}}</td>
           <td *ngIf="displayTableRecords(0) && displayTableDetails(0)" class="col-lg-2">Policy Number</td>
           <td *ngIf="displayTableRecords(1) && displayTableDetails(1)" class="col-lg-2">Status</td>
           <td *ngIf="displayTableRecords(2) && displayTableDetails(2)" class="col-lg-2">Group Name</td>
@@ -90,8 +90,8 @@
       </div>
       <div *ngFor="let data of currentDataList; let i = index" class="records-data col-lg-12">
         <div class="row">
-          <td *ngIf="displayTableRecords(0) && displayTableDetails(0, true)" class="col-lg-1 text-style" title="{{data[displayTableu()]}}">{{data[displayTableu()]}}</td>
-          <td *ngIf="displayTableRecords(0) && displayTableDetails(0)" class="col-lg-2 text-style" title="{{data.policyNumber}}">{{data.policyNumber}}</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0, true)" [ngClass]="[4,5,6,7].indexOf(keyTable) >= 0 ? 'col-lg-1 text-style' : 'col-lg-2 text-style'" class="col-lg-1 text-style" title="{{data[displayTableu()]}}">{{data[displayTableu()]}}</td>
+          <td *ngIf="displayTableRecords(0) && displayTableDetails(0)" class="col-lg-2" title="{{data.policyNumber}}">{{data.policyNumber}}</td>
           <td *ngIf="displayTableRecords(1) && displayTableDetails(1)" class="col-lg-2" title="{{data.status}}">{{data.status}}</td>
           <td *ngIf="displayTableRecords(2) && displayTableDetails(2)" class="col-lg-2" title="{{data.groupName}}">{{data.groupName}}</td>
           <td *ngIf="displayTableRecords(3) && displayTableDetails(3)" class="col-lg-2 text-style" title="{{data.notes}}">{{data.notes}}</td>
