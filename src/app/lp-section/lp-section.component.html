@@ -4,10 +4,10 @@
       <span class="fa fa-camera header"></span>&nbsp;&nbsp;<span class="header">Task Manager &nbsp;&nbsp;</span>
       <label for="filterlist" class="filter">Filter By:</label>
       <select id="list" (change)="check($event)">
-        <option value="0">Due Date</option>
-        <option value="1">Client</option>
-        <option value="3">Responsibility</option>
-        <option value="4">Category</option>
+        <option value="date">Due Date</option>
+        <option value="client">Client</option>
+        <option value="responsibility">Responsibility</option>
+        <option value="category">Category</option>
       </select>
     </ng-container>
     <ng-container *ngIf="recordView">
