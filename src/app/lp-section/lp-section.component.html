@@ -44,6 +44,7 @@
         <option value="4">4 Columns</option>
         <option value="3">3 Columns</option>
         <option value="2">2 Columns</option>
+        <option value="1">1 Columns</option>
       </select>
     </ng-container>
     
@@ -55,12 +56,13 @@
   </div>
 
   <div class="row cardView" *ngIf="cardView">
-    <ng-container *ngFor="let grpRecord of grpItemKeys; let first = first;">
+    <ng-container *ngFor="let grpRecord of grpItemKeys; let first = first; let id = index;">
         <div class="col-lg-3">
           <div class="col-lg-12 due-date" *ngIf="key === 'date'"><span *ngIf="first">Due </span>{{grpRecord | date:'mediumDate'}}</div>
           <div class="col-lg-12 due-date" *ngIf="key !== 'date'">{{grpRecord}}</div>
           <div class="item-list" cdkDropList id="{{grpRecord}}" (cdkDropListDropped)="drop($event)" [cdkDropListData]="grpItem[grpRecord]" [cdkDropListConnectedTo]="connect(grpRecord)">
-            <div cdkDrag *ngFor="let grpDa of grpItem[grpRecord];">
+            <div cdkDrag *ngFor="let grpDa of grpItem[grpRecord];"
+            (cdkDragEntered)="dragEntered($event)">
               <div class="col-card">
                 <div class="col-lg-12 mb-16 col-text">{{grpDa.type}}<span style="float: right;">::</span></div>
                 <div class="col-lg-12"><span class="col-head">Category:</span>&nbsp;&nbsp;{{grpDa.category}}</div>

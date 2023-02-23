@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, CdkDragEnter, CdkDragMove, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import * as _ from 'lodash';
 
 @Component({
@@ -10,6 +10,7 @@ import * as _ from 'lodash';
 })
 
 export class LpSectionComponent implements OnInit {
+  @ViewChild('dropListContainer') dropListContainer?: ElementRef;
   constructor() { }
   items: any
   grpItemKeys;
@@ -28,6 +29,11 @@ export class LpSectionComponent implements OnInit {
   keyTableR = 8;
   dataListKeys = ['Policy Number','Status','Group Name','Notes','Effective Date','TPA','Underwriter','Producer'];
   keyTable = 0;
+  dropListReceiverElement?: HTMLElement;
+  dragDropInfo?: {
+    dragIndex: number;
+    dropIndex: number;
+  };
 
   ngOnInit() {
     this.data = [{ date: new Date('03-1-1986'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollmentio', responsibility: 'Internal Account Team', client: 'Apple Inc 9000' },
@@ -119,5 +125,13 @@ export class LpSectionComponent implements OnInit {
   
   displayTableu() {
     return Object.keys(this.dataList[0])[this.keyTable];
+  }
+
+  dragEntered(event: CdkDragEnter<any>) {
+    const dropList = event.container;
+    let dropIndex = dropList.data;
+    this.grpItem[dropList.id] = dropIndex;
+    setTimeout(() => {dropIndex = dropIndex.map((data) => { data[this.key] = `${dropList.id}`, data})});
+    console.log(this.grpItem);  
   }
 }
