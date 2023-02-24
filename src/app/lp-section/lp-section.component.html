@@ -8,22 +8,12 @@
         <option value="client">Client</option>
         <option value="responsibility">Responsibility</option>
         <option value="category">Category</option>
+        <option value="type">Type</option>
       </select>
     </ng-container>
     <ng-container *ngIf="recordView">
       <span class="fa fa-table header"></span>&nbsp;&nbsp;<span class="header">Workstream &nbsp;&nbsp;</span>
       <label for="filterlist" class="filter">Show Policies for Activity:</label>
-      <!-- <input list="list" name="filterlist" id="filterlist" value="Policy Issuance" (change)="checkTable($event)">
-      <datalist id="list">
-        <option value="Policy Issuance">
-        <option value="Status">
-        <option value="Group Name">
-        <option value="Notes">
-        <option value="Effective Date">
-        <option value="TPA">
-        <option value="Underwriter">
-        <option value="Producer">
-      </datalist> -->
       <select id="list" (change)="checkTable($event)">
         <option value="0">Policy Issuance</option>
         <option value="1">Status</option>
@@ -57,7 +47,7 @@
 
   <div class="row cardView" *ngIf="cardView">
     <ng-container *ngFor="let grpRecord of grpItemKeys; let first = first; let id = index;">
-        <div class="col-lg-3">
+        <div class="col-lg-3" *ngIf="id <=3">
           <div class="col-lg-12 due-date" *ngIf="key === 'date'"><span *ngIf="first">Due </span>{{grpRecord | date:'mediumDate'}}</div>
           <div class="col-lg-12 due-date" *ngIf="key !== 'date'">{{grpRecord}}</div>
           <div class="item-list" cdkDropList id="{{grpRecord}}" (cdkDropListDropped)="drop($event)" [cdkDropListData]="grpItem[grpRecord]" [cdkDropListConnectedTo]="connect(grpRecord)">
@@ -68,6 +58,7 @@
                 <div class="col-lg-12"><span class="col-head">Category:</span>&nbsp;&nbsp;{{grpDa.category}}</div>
                 <div class="col-lg-12"><span class="col-head">Responsibility:</span>&nbsp;&nbsp;{{grpDa.responsibility}}</div>
                 <div class="col-lg-12"><span class="col-head">Client:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.client}}</span></div>
+                <div class="col-lg-12"><span class="col-head">Date:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.date | date:'mediumDate'}}</span></div>
               </div>
             </div>
           </div>
@@ -104,7 +95,7 @@
         </div>
       </div>
       <div class="pagination">
-        <p>Items per page: {{itemsPerPage}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span>{{item1 + 1}}-{{item2}} of {{totalItem}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span [ngClass]="{active: this.index >=1}" (click)="previousItem()"><</span> &nbsp;&nbsp; <span [ngClass]="{active: this.index + 1 < this.totalItem/this.itemsPerPage}" (click)="nextItem()">></span></p>
+        <p>Items per page: {{itemsPerPage}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span>{{item1}}-{{item2}} of {{totalItem}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span [ngClass]="{active: this.index >=1}" (click)="previousItem()"><</span> &nbsp;&nbsp; <span [ngClass]="{active: this.index + 1 < this.totalItem/this.itemsPerPage}" (click)="nextItem()">></span></p>
       </div>
     </div>
   </div>
