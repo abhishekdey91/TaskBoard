@@ -55,10 +55,10 @@
             (cdkDragEntered)="dragEntered($event)">
               <div class="col-card">
                 <div class="col-lg-12 mb-16 col-text">{{grpDa.type}}<span style="float: right;">::</span></div>
-                <div class="col-lg-12"><span class="col-head">Category:</span>&nbsp;&nbsp;{{grpDa.category}}</div>
-                <div class="col-lg-12"><span class="col-head">Responsibility:</span>&nbsp;&nbsp;{{grpDa.responsibility}}</div>
-                <div class="col-lg-12"><span class="col-head">Client:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.client}}</span></div>
-                <div class="col-lg-12"><span class="col-head">Date:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.date | date:'mediumDate'}}</span></div>
+                <div class="col-lg-12" title="{{grpDa.category}}"><span class="col-head">Category:</span>&nbsp;&nbsp;{{grpDa.category}}</div>
+                <div class="col-lg-12" title="{{grpDa.responsibility}}"><span class="col-head">Responsibility:</span>&nbsp;&nbsp;{{grpDa.responsibility}}</div>
+                <div class="col-lg-12" title="{{grpDa.client}}"><span class="col-head">Client:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.client}}</span></div>
+                <div class="col-lg-12" title="{{grpDa.date | date:'mediumDate'}}"><span class="col-head">Date:</span>&nbsp;&nbsp;<span class="col-text">{{grpDa.date | date:'mediumDate'}}</span></div>
               </div>
             </div>
           </div>
