@@ -4,37 +4,37 @@
       <span class="fa fa-camera header"></span>&nbsp;&nbsp;<span class="header">Task Manager &nbsp;&nbsp;</span>
       <label for="filterlist" class="filter">Filter By:</label>
       <select id="list" (change)="check($event)">
-        <option value="date">Due Date</option>
-        <option value="client">Client</option>
-        <option value="responsibility">Responsibility</option>
-        <option value="category">Category</option>
-        <option value="type">Type</option>
+        <option value="date" [attr.selected]="key === 'date' ? true : null">Due Date</option>
+        <option value="client" [attr.selected]="key === 'client' ? true : null">Client</option>
+        <option value="responsibility" [attr.selected]="key === 'responsibility' ? true : null">Responsibility</option>
+        <option value="category" [attr.selected]="key === 'category' ? true : null">Category</option>
+        <option value="type" [attr.selected]="key === 'type' ? true : null">Type</option>
       </select>
     </ng-container>
     <ng-container *ngIf="recordView">
       <span class="fa fa-table header"></span>&nbsp;&nbsp;<span class="header">Workstream &nbsp;&nbsp;</span>
       <label for="filterlist" class="filter">Show Policies for Activity:</label>
       <select id="list" (change)="checkTable($event)">
-        <option value="0">Policy Issuance</option>
-        <option value="1">Status</option>
-        <option value="2">Group Name</option>
-        <option value="3">Notes</option>
-        <option value="4">Effective Date</option>
-        <option value="5">TPA</option>
-        <option value="6">Underwriter</option>
-        <option value="7">Producer</option>
+        <option value="0" [attr.selected]="keyTable === 0 ? true : null">Policy Issuance</option>
+        <option value="1" [attr.selected]="keyTable === 1 ? true : null">Status</option>
+        <option value="2" [attr.selected]="keyTable === 2 ? true : null">Group Name</option>
+        <option value="3" [attr.selected]="keyTable === 3 ? true : null">Notes</option>
+        <option value="4" [attr.selected]="keyTable === 4 ? true : null">Effective Date</option>
+        <option value="5" [attr.selected]="keyTable === 5 ? true : null">TPA</option>
+        <option value="6" [attr.selected]="keyTable === 6 ? true : null">Underwriter</option>
+        <option value="7" [attr.selected]="keyTable === 7 ? true : null">Producer</option>
       </select>
 
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="filterlist2" class="filter">Showing:</label>
       <select id="filterlist" (change)="checkTotalCol($event)">
-        <option value="7">8 Columns</option>
-        <option value="6">7 Columns</option>
-        <option value="5">6 Columns</option>
-        <option value="4">5 Columns</option>
-        <option value="3">4 Columns</option>
-        <option value="2">3 Columns</option>
-        <option value="1">2 Columns</option>
-        <option value="0">1 Columns</option>
+        <option value="7" [attr.selected]="keyTableIds === 7 ? true : null">8 Columns</option>
+        <option value="6" [attr.selected]="keyTableIds === 6 ? true : null">7 Columns</option>
+        <option value="5" [attr.selected]="keyTableIds === 5 ? true : null">6 Columns</option>
+        <option value="4" [attr.selected]="keyTableIds === 4 ? true : null">5 Columns</option>
+        <option value="3" [attr.selected]="keyTableIds === 3 ? true : null">4 Columns</option>
+        <option value="2" [attr.selected]="keyTableIds === 2 ? true : null">3 Columns</option>
+        <option value="1" [attr.selected]="keyTableIds === 1 ? true : null">2 Columns</option>
+        <option value="0" [attr.selected]="keyTableIds === 0 ? true : null">1 Columns</option>
       </select>
     </ng-container>
     
