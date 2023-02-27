@@ -18,8 +18,6 @@ export class LpSectionComponent implements OnInit {
   currentDataList;
   recordView = true;
   totalItem = this.dataList.length;
-  //item1 = 1;
-  //item2 = 10;
   itemsPerPage = 10;
   cardView = false;
   index = 0;
@@ -92,7 +90,7 @@ export class LpSectionComponent implements OnInit {
     return dateCurrent.date - dateUpcoming.date;
   }
 
-  check(event: any) { // without type info
+  check(event: any) {
     this.key = event && event.target.value || this.key;
     this.grpItem = _.groupBy(this.data, this.key);
     this.grpItemKeys = Object.keys(this.grpItem);
@@ -105,17 +103,10 @@ export class LpSectionComponent implements OnInit {
 
   checkTable(event: any) {
     this.keyTable = parseInt(event && event.target.value || this.keyTable, 10);
-    //this.toggleView();
-    // this.recordView = !this.recordView;
-    // this.recordView = !this.recordView;
   }
 
   checkTotalCol(event: any) {
     this.keyTableIds = parseInt(event && event.target.value || this.keyTableIds, 10);
-    // this.recordView = !this.recordView;
-    // this.recordView = !this.recordView;
-    console.log(this.keyTable, this.keyTableIds);
-    //this.keyTable === this.keyTableIds ? this.checkTable(null) : ''
   }
 
   displayTableRecords(index) {
