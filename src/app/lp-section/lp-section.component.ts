@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, ElementRef, ViewChild } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, CdkDragEnter, CdkDragMove, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import * as _ from 'lodash';
 
@@ -123,7 +122,6 @@ export class LpSectionComponent implements OnInit {
 
   displayTableu(index) {
     return Object.keys(this.dataList[index])[this.keyTable];
-    //return typeof(Object.keys(this.dataList[index])[this.keyTable]) ==='string'  ? Object.keys(this.dataList[index])[this.keyTable] : '';
   }
 
   dragEntered(event: CdkDragEnter<any>) {
@@ -131,6 +129,5 @@ export class LpSectionComponent implements OnInit {
     let dropIndex = dropList.data;
     this.grpItem[dropList.id] = dropIndex;
     setTimeout(() => {dropIndex = dropIndex.map((data) => { data[this.key] = `${dropList.id}`, data})});
-    console.log(this.grpItem);  
   }
 }
