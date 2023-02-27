@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <div class="row cardView" *ngIf="cardView">
+  <div class="row" *ngIf="cardView">
     <ng-container *ngFor="let grpRecord of grpItemKeys; let first = first; let id = index;">
         <div class="col-lg-3" *ngIf="id <=3">
           <div class="col-lg-12 due-date" *ngIf="key === 'date'"><span *ngIf="first">Due </span>{{grpRecord | date:'mediumDate'}}</div>
@@ -66,10 +66,10 @@
     </ng-container>
   </div>
 
-  <div class="row recordView" *ngIf="recordView" style="margin: 20px 0px;">
+  <div class="row" *ngIf="recordView" style="margin: 20px 0px;">
     <div style="width:100%;">
       <div class="col-lg-12 records-data">
-          <div class="row">
+          <div class="row table-header">
           <td *ngIf="displayTableRecords(keyTableIds) && displayTableDetails(keyTableIds, true)" [ngClass]="[5,6,7].indexOf(keyTable) >= 0 ? 'col-lg-1' : 'col-lg-2'">{{this.dataListKeys[keyTable]}}</td>
           <td *ngIf="displayTableRecords(0) && displayTableDetails(0) && hideExtraCol(0)" class="col-lg-2">Policy Number</td>
           <td *ngIf="displayTableRecords(1) && displayTableDetails(1) && hideExtraCol(1)" class="col-lg-2">Status</td>

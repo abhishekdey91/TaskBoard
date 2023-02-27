@@ -38,9 +38,12 @@
   white-space: nowrap;
 }
 
+.table-header {
+   border-top: 1px solid black;
+}
+
 .records-data td {
   max-width: 200px;
-  border-top: 1px solid black;
   border-bottom: 1px solid black;
   overflow: hidden;
   text-overflow: ellipsis;  
@@ -60,14 +63,6 @@
 
 .text-style {
   color: #1a6997;
-}
-
-.cardView {
-  clear: both;
-}
-
-.recordView {
-  clear: both;
 }
 
 .pagination {
