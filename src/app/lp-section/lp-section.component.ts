@@ -10,7 +10,6 @@ import * as _ from 'lodash';
 })
 
 export class LpSectionComponent implements OnInit {
-  @ViewChild('dropListContainer') dropListContainer?: ElementRef;
   constructor() { }
   items: any
   grpItemKeys;
@@ -28,14 +27,9 @@ export class LpSectionComponent implements OnInit {
   item2 = this.item1 + this.itemsPerPage - 1;
   data = [];
   key = 'date';
-  keyTableR = 8;
+  keyTableIds = 7;
   dataListKeys = ['Policy Number','Status','Group Name','Notes','Effective Date','TPA','Underwriter','Producer'];
   keyTable = 0;
-  dropListReceiverElement?: HTMLElement;
-  dragDropInfo?: {
-    dragIndex: number;
-    dropIndex: number;
-  };
 
   ngOnInit() {
     this.data = [{ date: new Date('03-1-1985'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollmentio', responsibility: 'Internal Account Team', client: 'Apple Inc 9000' },{ date: new Date('03-1-1986'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollmentio', responsibility: 'Internal Account Team', client: 'Apple Inc 9000' },
@@ -111,20 +105,31 @@ export class LpSectionComponent implements OnInit {
 
   checkTable(event: any) {
     this.keyTable = parseInt(event && event.target.value || this.keyTable, 10);
+    //this.toggleView();
+    // this.recordView = !this.recordView;
+    // this.recordView = !this.recordView;
   }
 
-  checkTotalRow(event: any) {
-    this.keyTableR = parseInt(event && event.target.value || this.keyTableR, 10);
+  checkTotalCol(event: any) {
+    this.keyTableIds = parseInt(event && event.target.value || this.keyTableIds, 10);
+    // this.recordView = !this.recordView;
+    // this.recordView = !this.recordView;
+    console.log(this.keyTable, this.keyTableIds);
+    //this.keyTable === this.keyTableIds ? this.checkTable(null) : ''
   }
 
   displayTableRecords(index) {
-    return index <= this.keyTableR - 1;
+    return index <= this.keyTableIds;
   }
 
   displayTableDetails(key, isRequired) {
-    return isRequired || key != this.keyTable;
+    return isRequired || (key !== this.keyTable);
   }
   
+  hideExtraCol(index) {
+    return (index > this.keyTable || index!== this.keyTableIds);
+  }
+
   displayTableu() {
     return Object.keys(this.dataList[0])[this.keyTable];
   }
