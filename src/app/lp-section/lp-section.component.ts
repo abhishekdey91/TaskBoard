@@ -27,7 +27,7 @@ export class LpSectionComponent implements OnInit {
   key = 'date';
   keyTableIds = 7;
   dataListKeys = ['Policy Number','Status','Group Name','Notes','Effective Date','TPA','Underwriter','Producer'];
-  keyTable = 0;
+  keyTable = 4;
 
   ngOnInit() {
     this.data = [{ date: new Date('03-1-1985'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollmentio', responsibility: 'Internal Account Team', client: 'Apple Inc 9000' },{ date: new Date('03-1-1986'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollmentio', responsibility: 'Internal Account Team', client: 'Apple Inc 9000' },
@@ -121,8 +121,9 @@ export class LpSectionComponent implements OnInit {
     return (index > this.keyTable || index!== this.keyTableIds);
   }
 
-  displayTableu() {
-    return Object.keys(this.dataList[0])[this.keyTable];
+  displayTableu(index) {
+    return Object.keys(this.dataList[index])[this.keyTable];
+    //return typeof(Object.keys(this.dataList[index])[this.keyTable]) ==='string'  ? Object.keys(this.dataList[index])[this.keyTable] : '';
   }
 
   dragEntered(event: CdkDragEnter<any>) {

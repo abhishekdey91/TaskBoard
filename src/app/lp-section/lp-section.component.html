@@ -83,7 +83,12 @@
       </div>
       <div *ngFor="let data of currentDataList; let i = index" class="records-data col-lg-12">
         <div class="row">
-          <td *ngIf="displayTableRecords(keyTableIds) && displayTableDetails(keyTableIds, true)" [ngClass]="[4,5,6,7].indexOf(keyTable) >= 0 ? 'col-lg-1 text-style' : 'col-lg-2 text-style'" class="col-lg-1 text-style" title="{{data[displayTableu()]}}">{{data[displayTableu()]}}</td>
+          <td *ngIf="[4].indexOf(keyTable) >= 0 && displayTableRecords(keyTableIds) && displayTableDetails(keyTableIds, true)" [ngClass]="[4,5,6,7].indexOf(keyTable) >= 0 ? 'col-lg-1 text-style' : 'col-lg-2 text-style'" class="col-lg-1 text-style" title="{{data[displayTableu(i)] | date:'mediumDate'}}">
+            {{data[displayTableu(i)] | date:'mediumDate' }}
+          </td>
+          <td *ngIf="[4].indexOf(keyTable) === -1 && displayTableRecords(keyTableIds) && displayTableDetails(keyTableIds, true)" [ngClass]="[4,5,6,7].indexOf(keyTable) >= 0 ? 'col-lg-1 text-style' : 'col-lg-2 text-style'" class="col-lg-1 text-style" title="{{data[displayTableu(i)]}}">
+            {{data[displayTableu(i)]}}
+          </td>
           <td *ngIf="displayTableRecords(keyTableIds) && displayTableDetails(0) && hideExtraCol(0)" class="col-lg-2" title="{{data.policyNumber}}">{{data.policyNumber}}</td>
           <td *ngIf="displayTableRecords(1) && displayTableDetails(1) && hideExtraCol(1)" class="col-lg-2" title="{{data.status}}">{{data.status}}</td>
           <td *ngIf="displayTableRecords(2) && displayTableDetails(2) && hideExtraCol(2)" class="col-lg-2" title="{{data.groupName}}">{{data.groupName}}</td>
