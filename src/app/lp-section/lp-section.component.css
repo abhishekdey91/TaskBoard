@@ -38,7 +38,7 @@
   white-space: nowrap;
 }
 
-.table-header {
+.table-header td{
    border-top: 1px solid black;
 }
 
