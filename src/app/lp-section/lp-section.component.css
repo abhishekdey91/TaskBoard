@@ -28,8 +28,10 @@
 }
 
 .col-head {
-  font-size: 15px;
-  font-weight: bold;
+  margin: 19px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 0;
 }
 
 .col-card .col-lg-12 {
@@ -91,7 +93,6 @@ input {
   font-size: 12px;
   cursor: pointer;
 }
-
 
 select {
   border-radius: 5px;
