@@ -52,7 +52,7 @@
           <div class="col-lg-12 due-date" *ngIf="key !== 'date'">{{grpRecord}}</div>
           <div class="item-list" cdkDropList id="{{grpRecord}}" (cdkDropListDropped)="drop($event)" [cdkDropListData]="grpItem[grpRecord]" [cdkDropListConnectedTo]="connect(grpRecord)">
             <div cdkDrag *ngFor="let grpDa of grpItem[grpRecord];"
-            (cdkDragEntered)="dragEntered($event)">
+            (cdkDragEntered)="dragEntered($event, grpDa.index)">
               <div class="col-card">
                 <div class="col-lg-12 mb-16 col-text">{{grpDa.type}}<span style="float: right;">::</span></div>
                 <div class="col-lg-12" title="{{grpDa.category}}"><span class="col-head">Category:</span>&nbsp;&nbsp;{{grpDa.category}}</div>

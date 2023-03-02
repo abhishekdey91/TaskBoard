@@ -15,10 +15,11 @@ export class LpSectionComponent implements OnInit {
   grpItem = {};
   dataList = [];
   currentDataList;
-  recordView = true;
+  currentData;
+  recordView = !true;
   totalItem = this.dataList.length;
   itemsPerPage = 10;
-  cardView = false;
+  cardView = !false;
   index = 0;
   item1 = this.itemsPerPage * this.index + 1;
   item2 = this.item1 + this.itemsPerPage - 1;
@@ -37,12 +38,14 @@ export class LpSectionComponent implements OnInit {
     { date: new Date('03-1-1990'), type: 'Final aggreagete Output 74949', category: 'Open Enrollment', responsibility: 'Internal Account Team ioo', client: 'Apple Inc' },
     { date: new Date('3-1-1959'), type: 'Final Aggregate/ Claim Report', category: 'Open Enrollment', responsibility: 'Internal Account Team', client: 'Apple Inc' }];
     this.dataList = [{ policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites1', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites2', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort in house source Register', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites3', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }, { policyNumber: 'NGXE1006-2022R7', status: 'Collecting Policy Prerequisites13', groupName: 'Earnhardt Manufacturing Inc', notes: 'SB 7/19 licencing resort', effectiveDate: new Date('03-1-1986'), tpa: 'Health Plans Inc', underwriter: 'NG', producer: 'Health Plans Inc.' }];
-    this.data.map((data, index) => {data.index = index, data});
+    this.currentData = [...this.data];
+    this.currentData.map((data, index) => {data.index = index, data});
     this.currentDataList = [...this.dataList];
     this.currentDataList = this.currentDataList.splice(this.item1 - 1, this.itemsPerPage);
     this.totalItem = this.dataList.length;
     this.check(null);
     this.displayTableDetails(this.keyTable, false);
+    //console.log(this.data);
   }
 
   toggleView() {
@@ -125,14 +128,43 @@ export class LpSectionComponent implements OnInit {
     return Object.keys(this.dataList[index])[this.keyTable];
   }
 
-  dragEntered(event: CdkDragEnter<any>) {
-    const dropList = event.container;
+  dragEntered(event: CdkDragDrop<any>, id) {
+    let dropList = event.container;
+    //let  dropListitem = event.item.dropContainer.data;
     let dropIndex = dropList.data;
-    this.grpItem[dropList.id] = dropIndex;
-    setTimeout(() => {dropIndex = dropIndex.map((data) => { 
-      data[this.key] = `${dropList.id}`, 
-      this.data[data['index']][this.key] = `${dropList.id}`, 
-      data
-    })});
+    //this.grpItem[dropList.id] = dropIndex;
+    //dropListitem[0][this.key] = this.key === 'date' ?  new Date(`${dropList.id}`) : `${dropList.id}`;
+    //this.data[id][this.key] = this.key === 'date' ?  new Date(`${dropList.id}`) : `${dropList.id}`;
+    //console.log(this.data, event.item.dropContainer.id, dropList.id);
+    //this.data[[this.key]dropListitem[0][this.key] = new Date(`${dropList.id}`);
+    // setTimeout(() => {dropListitem = dropListitem.map((data) => { 
+    //   if(data.index === id) {
+    //     console.log(id, data.index,'ssssss');
+    //     this.data[data['index']][this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}`, 
+    //     data[this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}`,
+    //     data,
+    //     console.log( `${event.item.dropContainer.id}`);
+    //   }
+    // })}, 1000);
+    setTimeout(() => {
+      dropIndex.forEach((data) => { 
+      if(data.index === id) {
+        // console.log(id, data.index, `${event.item.dropContainer.id}`, `${dropList.id}`);
+        this.currentData[data.index][this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}`, 
+        data[this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}`,
+        data
+      }
+    });
+    //  if(!dropIndex.length) {
+    //   //this.data[id][this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}` 
+    // }
+    }, 500);
+    
+      // this.data[data['index']][this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}`, 
+      // data[this.key] = this.key === 'date' ? new Date(`${dropList.id}`) : `${dropList.id}`,
+      // data,
+      // console.log(dropList.id, dropListitem);
+    
   }
+
 }
